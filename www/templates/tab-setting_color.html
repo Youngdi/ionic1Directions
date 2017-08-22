@@ -1,0 +1,71 @@
+<ion-view view-title="{{setting_color_title}}">
+    <ion-content>
+        <div class="list">
+            <a class="item item-icon-right" ng-click="color_setting('#CFCFCF','bar-stable','tabs-stable','stable');">
+                <i class="icon"><span style="width:30px;height:30px; background-color:#FFF; border:1px #000 solid; border-radius:3px;"></span></i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">白色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">白色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">White</h2>
+            </a>
+            <a class="item item-icon-right" ng-click="color_setting('#000','bar-dark','tabs-dark','dark');">
+                <i class="icon">
+                <span style="width:30px;height:30px; background-color:#000; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">黑色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">黑色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Black</h2>
+            </a>
+            <!--             <a class="item item-icon-right" ng-click="color_setting('',2);">
+                <span style="width:30px;height:30px; background-color:#387ef5; border-radius:3px;"></span>
+                <h2 style="white-space:pre-wrap">夜間閱讀模式</h2>
+            </a> -->
+            <a class="item item-icon-right" ng-click="color_setting('#387ef5','bar-positive','tabs-positive','positive');">
+                <i class="icon">
+                <span style="width:30px;height:30px; background-color:#387ef5; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">深藍色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">深蓝色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Dark Blue</h2>
+            </a>
+            <a class="item item-icon-right" ng-click="color_setting('#F6197A','bar-calm','tabs-calm','calm');">
+                <i class="icon">
+                <span class="item-note " style="width:30px;height:30px; background-color:#F6197A; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">粉紅色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">粉红粉</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Pink</h2>
+            </a>
+            <a class="item item-icon-right" ng-click="color_setting('#249F88','bar-balanced','tabs-balanced','balanced');">
+                <i class="icon">
+                <span style="width:30px;height:30px; background-color:#249F88; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">墨綠色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">墨绿色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Dark Green</h2>
+            </a>
+            <a class="item item-icon-right" ng-click="color_setting('#F6C30A','bar-energized','tabs-energized','energized');">
+                <i class="icon">
+                <span style="width:30px;height:30px; background-color:#F6C30A; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">黃色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">黃色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Yellow</h2>
+            </a>
+            <a class="item item-icon-right" ng-click="color_setting('#ef473a','bar-assertive','tabs-assertive','assertive');">
+                <i class="icon">
+                <span style="width:30px;height:30px; background-color:#ef473a; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">朱紅色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">朱红色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Red</h2>
+            </a>
+            <a class="item item-icon-right" ng-click="color_setting('#6618C3','bar-royal','tabs-royal','royal');">
+                <i class="icon">
+                <span style="width:30px;height:30px; background-color:#6618C3; border-radius:3px;"></span>
+                </i>
+                <h2 ng-if="lang == 'cht'" style="white-space:pre-wrap">紫色</h2>
+                <h2 ng-if="lang == 'chs'" style="white-space:pre-wrap">紫色</h2>
+                <h2 ng-if="lang == 'en'" style="white-space:pre-wrap">Purple</h2>
+            </a>
+    </ion-content>
+</ion-view>

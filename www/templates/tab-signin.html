@@ -1,0 +1,42 @@
+<ion-view title="Sign">
+    <ion-content class="padding">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+            <H1>iTunes Connect</H1>
+        </center>
+        <form ng-submit="insert(user)" name="userForm" class="ng-dirty ng-valid-required ng-invalid ng-invalid-email" autocomplete="off">
+            <div class="list">
+                <label class="item item-input" style="border-style:none">
+                    <span class="input-label">Username</span>
+                    <!--                     <input type="email" name="email" class="form-control ng-dirty ng-valid-required ng-invalid ng-invalid-email" data-ng-model="user.username" onfocus placeholder="a123@yahoo.com.tw" required=""> -->
+                    <input type="text" name="text" data-ng-model="user.username" onfocus>
+                </label>
+                <label class="item item-input" style="border-style:none">
+                    <span class="input-label">Password</span>
+   <!--                  <input type="password" name="password" class="form-control ng-dirty ng-valid ng-valid-required" data-ng-model="user.password" placeholder="Password" onfocus ng-minlength="5" ng-maxlength="20" required> -->
+                    <input type="text" name="text" data-ng-model="user.lastname" onfocus>
+                </label>
+                <br>
+                <p ng-show="userForm.email.$invalid &amp;&amp; !userForm.email.$pristine" style="color:red" class="">Enter a valid email.</p>
+                <p ng-show="userForm.password.$invalid &amp;&amp; !userForm.password.$pristine" style="color:red" class="">Passward should be more than 5 character</p>
+                <button type="submit" ng-disabled="userForm.$invalid" class="button button-positive button-clear button-full" disabled="disabled" style="margin-top:-10px;">Sign in...</button>
+            </div>
+        </form>
+        <p>{{user}}</p>
+        <form ng-submit="select(user)" name="userForm1">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">select</span>
+                    <!--                     <input type="email" name="email" class="form-control ng-dirty ng-valid-required ng-invalid ng-invalid-email" data-ng-model="user.username" onfocus placeholder="a123@yahoo.com.tw" required=""> -->
+                    <input type="text" name="text" data-ng-model="user.lastname1" onfocus>
+                </label>
+                <button type="submit" class="button button-positive button-clear button-full">select</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
