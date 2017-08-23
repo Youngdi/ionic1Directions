@@ -113,7 +113,7 @@ angular.module('app', ['ionic', 'ngCordova', 'ionicApp.controllers', 'ionicApp.s
             function copysuccess() {
                 //open db and run your queries
                 if ($cordovaDevice.getPlatform() === "Android") {
-                    db = window.sqlitePlugin.openDatabase({ name: "directions.db" });
+                    db = window.sqlitePlugin.openDatabase({ name: "directions.db", location: 0 });
                 } else {
                     db = window.sqlitePlugin.openDatabase({ name: "directions.db", location: 1 });
                 }
