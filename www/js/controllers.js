@@ -6,14 +6,9 @@ angular.module('ionicApp.controllers', [])
     $('.title').click(function() {
         $scope.lesson(false);
     });
-    // setTimeout(function() {
-    //     home_init();
-    //     // $ionicLoading.hide();
-    // }, 2000);
     $ionicPlatform.ready(function() {
         var save_location = "";
         if ($cordovaDevice.getPlatform() === "Android") {
-            console.log('I am android');
             save_location = cordova.file.applicationStorageDirectory + 'databases/';
         } else {
             // save_location = cordova.file.documentsDirectory;
@@ -21,16 +16,12 @@ angular.module('ionicApp.controllers', [])
         }
         $cordovaFile.checkFile(save_location, "directions.db")
             .then(function() {
-                console.log('has db home_init()');
                 setTimeout(function() {
                     home_init();
-                    // $ionicLoading.hide();
                 }, 2000);
             }, function() {
-                console.log('no db');
                 setTimeout(function() {
                     home_init();
-                    // $ionicLoading.hide();
                 }, 2000);
             });
     });
@@ -60,18 +51,13 @@ angular.module('ionicApp.controllers', [])
             }
             $('.nav_bar_color').addClass(res.rows.item(0).bar_color_mode);
             $('#tabs_color').addClass(res.rows.item(0).tabs_color_mode);
-            // $('.font_range_color').addClass('range-' + res.rows.item(0).color_ionic);
         }, function(error) {
-            alert(JSON.stringify(error));
             console.log(error);
-            console.log(error.message);
         });
 
         function version_select(article_version) {
             var query = "SELECT * FROM " + article_version + " WHERE h_where = 1000";
             $cordovaSQLite.execute(db, query).then(function(res) {
-                console.log(res.rows.item(0).h_where);
-                console.log(res.rows.item(0).h_text);
                 $scope.lesson_data = [];
                 var lesson_data = [];
                 for (i = 0; i < res.rows.length; i++) {
@@ -826,10 +812,6 @@ angular.module('ionicApp.controllers', [])
         element.style.height = scrollHeight + "px";
         var h_where = Number(element.name.slice(0, 4));
         var version = element.name.slice(4, 15);
-        // console.log(Number(element.name.slice(0,4)));
-        // console.log(element.name.slice(4,15));
-        console.log(h_where);
-        console.log(version);
         var query = "UPDATE '" + version + "' SET h_text = '" + element.value + "' WHERE h_where = " + h_where + " AND h_format = 7 AND h_id = " + element.id + "";
         $cordovaSQLite.execute(db, query).then(function(res) {});
   };
@@ -851,8 +833,6 @@ angular.module('ionicApp.controllers', [])
         server_passage = Bible_var;
         book_name = server_passage[0];
         chapter_nr = Number(server_passage[1].slice(1, 4));
-        // console.log(book_name);
-        // console.log(chapter_nr);
         $scope.P_title = P_title;
         if (version === "kjv") {
             if (server_passage.length === 2) {
@@ -899,9 +879,6 @@ angular.module('ionicApp.controllers', [])
                             console.log(err);
                         });
                     } else if (Number(server_passage[2]) > 1000) {
-                        // console.log(Number(server_passage[2]));
-                        // console.log(verse_nr1);
-                        // console.log(verse_nr2);
                         query = "SELECT * FROM bible_kjv WHERE book_name = '" + book_name + "' AND chapter_nr ='" + chapter_nr + "' AND verse_nr >= " + verse_nr1 + " AND verse_nr <= " + verse_nr2 + " ORDER BY verse_nr";
                         $cordovaSQLite.execute(db, query).then(function(res) {
                             var verse = [];
