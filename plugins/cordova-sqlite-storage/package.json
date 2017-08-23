@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "cordova-sqlite-storage",
+        "raw": "cordova-sqlite-storage@^2.0.4",
         "scope": null,
         "escapedName": "cordova-sqlite-storage",
         "name": "cordova-sqlite-storage",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "rawSpec": "^2.0.4",
+        "spec": ">=2.0.4 <3.0.0",
+        "type": "range"
       },
       "/Users/yang/Desktop/directions/node_modules"
     ]
   ],
-  "_from": "cordova-sqlite-storage@latest",
+  "_from": "cordova-sqlite-storage@>=2.0.4 <3.0.0",
   "_id": "cordova-sqlite-storage@2.0.4",
   "_inCache": true,
   "_location": "/cordova-sqlite-storage",
@@ -29,13 +29,13 @@
   "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "cordova-sqlite-storage",
+    "raw": "cordova-sqlite-storage@^2.0.4",
     "scope": null,
     "escapedName": "cordova-sqlite-storage",
     "name": "cordova-sqlite-storage",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "rawSpec": "^2.0.4",
+    "spec": ">=2.0.4 <3.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "#USER",
@@ -44,7 +44,7 @@
   "_resolved": "https://registry.npmjs.org/cordova-sqlite-storage/-/cordova-sqlite-storage-2.0.4.tgz",
   "_shasum": "8b5ce65c63b46b0415ca7012cc57bf2711b20371",
   "_shrinkwrap": null,
-  "_spec": "cordova-sqlite-storage",
+  "_spec": "cordova-sqlite-storage@^2.0.4",
   "_where": "/Users/yang/Desktop/directions/node_modules",
   "author": {
     "name": "various"
