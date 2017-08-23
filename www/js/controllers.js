@@ -787,12 +787,67 @@ angular.module('ionicApp.controllers', [])
            resolve(myAnswer);
         });
     };
+    function getLessonQuestionsAndAnswers(content) {
+        return $q(function(resolve, reject) {
+           var pos = content.split('<br>');
+           var check = [];
+           var answer = {
+               questions: [],
+               answers: []
+             };
+           var myAnswer = '';
+           pos.forEach(function (element, index, array) {
+               if (element.search('<textarea') === 0) {
+                   check.push(index - 1);
+                   var start = element.search('>');
+                   var end = element.search('</textarea');
+                   answer.answers.push(element.slice(start + 1, end));
+                 }
+             });
+           check.forEach(function (element, index, array) {
+               if (pos[element].indexOf('class="bullet"') > 0) {
+                   var arr = pos[element].split('</li>');
+                   var b = arr[0].split('<li>');
+                   answer.questions.push(b[1]);
+                 } else {
+                   answer.questions.push((pos[element]));
+                 }
+             });
+//            answer.questions.forEach(function(element, index, array) {
+//                myAnswer = myAnswer + '<b>' + (index + 1 ) + '.</b><b>' + element + '</b><p>'+ answer.answers[index] +'</p>';
+//            });
+           answer.questions.forEach(function(element, index, array) {
+							var part3 = "";
+							 if (element.indexOf('<bp>') == 0) {
+								 var pos1 = element.indexOf('">');
+								 var pos2 = element.indexOf("</a>");
+								 var pos3 = element.indexOf(">.");
+								 var pos4 = element.indexOf('</p>');
+								 var part1 = element.slice(pos1+2, pos2);
+								 var part2 = element.slice(pos3+2, pos4 -8);
+								 part3 = 'Read '+ part1 +'.'+ part2;
+							 } else {
+								 part3 = element;
+							 }
+               myAnswer = myAnswer + (index + 1 ) + '.' + part3 + '\n\n' + 'Ans: '+ answer.answers[index] + '\n\n';
+           });
+           resolve(myAnswer);
+        });
+    };
 
     $scope.shareAnywhere = function () {
         LessonContent().then(function(content) {
            return getLessonQuestionsAndAnswers(content);
         }).then(function(myAnswer) {
-            $cordovaSocialSharing.shareViaEmail(myAnswer, 'Check out my answers from '+ $scope.lesson_day_title);
+						$cordovaSocialSharing
+						.share(myAnswer)
+            // .shareViaWhatsApp(myAnswer)
+            .then(function(result) {
+              // Success!
+            }, function(err) {
+              // An error occurred. Show a message to the user
+            });
+            // $cordovaSocialSharing.shareViaEmail(myAnswer, 'Check out my answers from '+ $scope.lesson_day_title);
         });
     };
     /* const curry = (fn, ...args1) =>  (...args2) => fn(...args1, ...args2);
