@@ -9,7 +9,6 @@
         "gulp-sass": "^3.1.0"
     },
     "dependencies": {
-        "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-console": "^1.0.5",
@@ -38,7 +37,6 @@
             "cordova-plugin-dbcopy": {}
         },
         "platforms": [
-            "android",
             "ios"
         ]
     }
