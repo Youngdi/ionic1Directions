@@ -817,21 +817,22 @@ angular.module('ionicApp.controllers', [])
 //                myAnswer = myAnswer + '<b>' + (index + 1 ) + '.</b><b>' + element + '</b><p>'+ answer.answers[index] +'</p>';
 //            });
            answer.questions.forEach(function(element, index, array) {
-							var part3 = "";
-							 if (element.indexOf('<bp>') == 0) {
-								 var pos1 = element.indexOf('">');
-								 var pos2 = element.indexOf("</a>");
-								 var pos3 = element.indexOf(">.");
-								 var pos4 = element.indexOf('</p>');
-								 var part1 = element.slice(pos1+2, pos2);
-								 var part2 = element.slice(pos3+2, pos4 -8);
-								 part3 = 'Read '+ part1 +'.'+ part2;
-							 } else {
-								 part3 = element;
-							 }
-               myAnswer = myAnswer + (index + 1 ) + '.' + part3 + '\n\n' + 'Ans: '+ answer.answers[index] + '\n\n';
+						function breif (flag, element) {
+								var part4 = "";
+								if (flag) {
+										var part1 = element.slice(element.indexOf('>') +1, element.indexOf('</'));
+										var part2 = element.slice(element.indexOf('">') +2, element.indexOf("</a>"));
+										var part3 = element.slice(element.indexOf("</a><bp>") + 8, element.indexOf('</p>') -8);
+										part4 = part1 + part2 + part3;
+								} else {
+										part4 = element;
+								}
+								return part4;
+						}
+						var content = breif(element.indexOf('<bp>') != -1, element);
+	          myAnswer = myAnswer + (index + 1 ) + '.' + content + '\n\n' + 'Ans: '+ answer.answers[index] + '\n\n';
            });
-           resolve(myAnswer);
+        	 resolve(myAnswer);
         });
     };
 
