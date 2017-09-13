@@ -83,7 +83,6 @@
     <allow-navigation href="http://172.17.28.105:8100" />
     <allow-navigation href="http://172.17.28.105:8101" />
     <allow-navigation href="http://172.17.28.143:8100" />
-    <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-console" spec="^1.0.5" />
     <plugin name="cordova-plugin-dbcopy" spec="^2.0.0" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
