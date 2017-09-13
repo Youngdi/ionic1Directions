@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/Directions.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.team4twionic.direction.bio</string>
+		<key>CFBundleShortVersionString</key>
+		<string>0.0.9</string>
+		<key>CFBundleVersion</key>
+		<string>0.0.9</string>
+		<key>SigningIdentity</key>
+		<string>iPhone Developer: Yu-Cheng Yang (9TA7884QJ2)</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2017-09-13T12:14:44Z</date>
+	<key>Name</key>
+	<string>Directions</string>
+	<key>SchemeName</key>
+	<string>Directions</string>
+</dict>
+</plist>

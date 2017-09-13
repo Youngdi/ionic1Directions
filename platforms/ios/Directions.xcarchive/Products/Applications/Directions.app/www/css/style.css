@@ -1,0 +1,171 @@
+/* Empty. Add your own CSS if you like */
+
+@font-face {
+    font-family: 'fontawesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+textarea {
+    height: auto;
+    color: #616061;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    border: #999 solid;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: -5px;
+/*    -webkit-transition: height 1s ease;
+    -moz-transition: height 1s ease;
+    -ms-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;*/
+}
+
+html,
+body,
+input,
+textarea,
+.ionic-body,
+.scroll,
+.disable-user-behavior {
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;
+}
+
+.bullet ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+#more_detail_content {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #616061;
+}
+
+.bible_content {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #616061;
+}
+
+.popover {
+    width: 100%;
+    height: 160px;
+    margin-top: 5px;
+    left: 0px !important;
+}
+
+.platform-ios .popover-arrow:after {
+    position: absolute;
+    top: 14px;
+    left: -25px;
+    width: 45px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 0px;
+    content: '';
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+
+/*.platform-ios .popover-arrow {
+    display: block;
+}*/
+
+.item-note {
+    color: #6A6A6A;
+}
+
+.my-custom-popup .has-tabs {
+    bottom: 0px;
+}
+
+
+/*.tab-item.tab-item-active,
+.tab-item.active,
+.tab-item.activated {
+    color: red;
+}*/
+
+.table_border {
+    border-width: 1px;
+    border-color: #A6A6A6;
+    border-style: groove;
+    padding: 8px;
+}
+
+.a_text {
+    background-color: #F6F6F6;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#lesson_content {
+    color: #616061;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+#bible_content {
+    font-size: 16px;
+}
+
+.font_select {
+    border: 1px solid #E1E1E1;
+}
+
+.font_select ul {
+    list-style: none;
+    /*        border: 1px solid black;*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto !important;
+    overflow-x: scroll !important;
+    overflow-y: scroll !important;
+    /* 超過範圍隱藏 */
+    white-space: nowrap;
+    /* 不斷行 */
+}
+
+.input-label {
+    width: 100%;
+    max-width: 600px;
+}
+
+.font_select ul li {
+    display: inline;
+    /* 水平排列 */
+}
+
+.font_select ul li a {
+    display: inline-block;
+    /* 水平內顯示為區塊 */
+    /*        border: 2px solid #ccc;*/
+    padding: 10px;
+    color: #9596A0;
+    border-right: 1px solid #E1E1E1;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+}
