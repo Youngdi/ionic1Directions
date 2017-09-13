@@ -1,0 +1,62 @@
+<ion-popover-view>
+    <ion-content overflow-scroll="true">
+        <label class="input-label">
+            <div class="range font_range_color">
+                <BP style="color:#9596A0">Size</BP>
+                <input type="range" min="10" max="30" value="{{size.value}}" step="2" ng-model="size.value" style="margin-left:3px;" ng-change="setLevelText(size.value)">
+                <BP style="color:#9596A0">{{size.value}}pt</BP>
+            </div>
+        </label>
+        <!--  <center> -->
+        <div class="font_select">
+            <ul>
+                <li>
+                    <a ng-click="change_font('Times',0)">
+                        <h5 id="font0" style="font-family:'Times'; color:#9596A0;">Times</h5>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="change_font('Avenir',1)">
+                        <h5 id="font1" style="font-family:'Avenir'; color:#9596A0;">Avenir</h5>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="change_font('Baskerville',2)">
+                        <h5 id="font2" style="font-family:'Baskerville';color:#9596A0;">Baskerville</h5>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="change_font('Georgia',3)">
+                        <h5 id="font3" style="font-family:'Georgia';color:#9596A0;">Georgia</h5>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="change_font('Hoefler Text',5)">
+                        <h5 id="font5" style="font-family:'Hoefler Text';color:#9596A0;">Hoefler Text</h5>
+                    </a>
+                </li>
+                <li>
+<!--                     <a ng-click="change_font('Verdana',4)">
+                        <h5 id="font4" style="font-family:'Verdana';color:#9596A0;">Verdana</h5>
+                    </a>
+                </li> -->
+                <!--                 <li>
+                    <a ng-click="change_font('Hoefler Text',5)">
+                        <h5 id="font5" style="font-family:'Hoefler Text';color:#9596A0;">Hoefler Text</h5>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="change_font('Helevtica Neue',6)">
+                        <h5 id="font6" style="font-family:'Helevtica Neue';color:#9596A0;">Helevtica Neue</h5>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="change_font('Lucida Sans Unicode',7)">
+                        <h5 id="font7" style="font-family:'Lucida Sans Unicode';color:#9596A0;">Lucida Sans Unicode</h5>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <!-- </center> -->
+    </ion-content>
+</ion-popover-view>

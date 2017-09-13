@@ -1,40 +1,43 @@
 {
-  "name": "directions",
-  "version": "0.0.1",
-  "description": "An Ionic project",
-  "devDependencies": {
-    "gulp": "^3.5.6",
-    "gulp-clean-css": "^3.7.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0"
-  },
-  "dependencies": {
-    "cordova-plugin-compat": "^1.1.0",
-    "cordova-plugin-console": "^1.0.5",
-    "cordova-plugin-dbcopy": "^2.0.0",
-    "cordova-plugin-device": "^1.1.4",
-    "cordova-plugin-file": "^4.3.3",
-    "cordova-plugin-splashscreen": "^4.0.3",
-    "cordova-plugin-statusbar": "^2.2.1",
-    "cordova-plugin-whitelist": "^1.3.1",
-    "cordova-plugin-x-socialsharing": "^5.2.0",
-    "cordova-sqlite-storage": "^2.0.4",
-    "es6-promise-plugin": "^4.1.0",
-    "ionic-plugin-keyboard": "^2.2.1"
-  },
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-console": {},
-      "cordova-plugin-device": {},
-      "cordova-plugin-file": {},
-      "cordova-plugin-splashscreen": {},
-      "cordova-plugin-statusbar": {},
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-x-socialsharing": {},
-      "cordova-sqlite-storage": {},
-      "ionic-plugin-keyboard": {},
-      "cordova-plugin-dbcopy": {}
+    "name": "directions",
+    "version": "0.0.1",
+    "description": "An Ionic project",
+    "devDependencies": {
+        "gulp": "^3.5.6",
+        "gulp-clean-css": "^3.7.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-sass": "^3.1.0"
     },
-    "platforms": []
-  }
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-compat": "^1.1.0",
+        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-dbcopy": "^2.0.0",
+        "cordova-plugin-device": "^1.1.4",
+        "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.1",
+        "cordova-plugin-whitelist": "^1.3.1",
+        "cordova-plugin-x-socialsharing": "^5.2.0",
+        "cordova-sqlite-storage": "^2.0.4",
+        "es6-promise-plugin": "^4.1.0",
+        "ionic-plugin-keyboard": "^2.2.1"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-x-socialsharing": {},
+            "cordova-sqlite-storage": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-dbcopy": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
 }
