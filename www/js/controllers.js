@@ -555,7 +555,7 @@ angular.module('ionicApp.controllers', [])
 
 })
 
-.controller('LessonContentCtrl', function($ionicModal, $compile, $scope, $cordovaSQLite, $stateParams, $ionicSideMenuDelegate, Bible_api , $q, $cordovaSocialSharing) {
+.controller('LessonContentCtrl', function($ionicModal, $compile, $scope, $cordovaSQLite, $stateParams, $ionicSideMenuDelegate, Bible_api , $q, $cordovaSocialSharing, $cordovaImagePicker, $cordovaFile, $cordovaDevice) {
     
     function LessonContent() {
         return $q(function(resolve, reject) {
@@ -835,7 +835,40 @@ angular.module('ionicApp.controllers', [])
         	 resolve(myAnswer);
         });
     };
-
+		function saveToFirebase(_imageBlob, _fileName) {
+			return $q(function(resolve, reject) {
+				var storageRef = firebase.storage().ref();
+				var uploadTask = storageRef.child('images/' + _fileName).put(_imageBlob);
+				uploadTask.on('state_changed', function(snapshot){
+				}, function(error) {
+					alert(error.message);
+				}, function () {
+					var downloadURL = uploadTask.snapshot.downloadURL;
+					resolve(downloadURL);
+				});
+			});
+		}
+		$scope.getPicture = function () {
+			var options = {
+				maximumImagesCount:1,
+				width: 800,
+				height:800,
+				quality:80,
+			}
+		  $cordovaImagePicker.getPictures(options)
+			.then(function(results) {
+				alert(results[0]);
+				var fileName = results[0].replace(/^.*[\\\/]/,'');
+				var path = $cordovaDevice.getPlatform() == 'Android' ? cordova.file.cacheDirectory : cordova.file.tempDirectory;
+				$cordovaFile.readAsArrayBuffer(path, fileName)
+					.then(function(success){
+						var imageBlob = new Blob([success], { type: "image/jpeg"});
+						saveToFirebase(imageBlob, fileName).then(function(downloadURL) {
+							alert(downloadURL);
+						});
+					});
+			});
+		}
     $scope.shareAnywhere = function () {
         LessonContent().then(function(content) {
            return getLessonQuestionsAndAnswers(content);

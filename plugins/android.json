@@ -36,6 +36,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
         }
     },
     "dependent_plugins": {

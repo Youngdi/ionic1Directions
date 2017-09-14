@@ -88,6 +88,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "com.synconset.imagepicker/BIO-ignorelinterrors.gradle"
+apply from: "com.synconset.imagepicker/BIO-androidtarget.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -250,6 +252,7 @@ dependencies {
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
     compile "com.android.support:support-v4:24.1.1+"
+    compile "com.android.support:appcompat-v7:23+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
