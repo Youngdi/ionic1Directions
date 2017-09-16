@@ -13,6 +13,14 @@ angular.module('app', ['ionic', 'ngCordova', 'ionicApp.controllers', 'ionicApp.s
               messagingSenderId: "442072231717",
           };
           firebase.initializeApp(config);
+          
+          firebase.auth().signInAnonymously().catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage);
+            // ...
+         });
           var myConnectionsRef = firebase.database().ref('users/joe/connections');
           // stores the timestamp of my last disconnect (the last time I was seen online)
           var lastOnlineRef = firebase.database().ref('users/joe/lastOnline');

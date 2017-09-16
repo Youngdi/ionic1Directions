@@ -86,7 +86,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		ma6dorIVxReW/Hl99j1geXVacYk=
+		1HRJa+Ictq6qtEzdrMj9Dr2A/T4=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,11 +94,35 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		84DBwO75CyaIcN9xyytbpB3PziI=
+		XwEB2D2e0rKYuPSmlWjAlHynfME=
+		</data>
+		<key>GMEmptyFolder@1x.png</key>
+		<data>
+		e11RHTQ4JWqtQ1GEnqyGGeWkaUI=
+		</data>
+		<key>GMEmptyFolder@2x.png</key>
+		<data>
+		fOXmu5ogCwKOMfAsoHh3wVTkW6U=
+		</data>
+		<key>GMSelected.png</key>
+		<data>
+		ZwDkB0AtEGOc9mVvXWsikNLIPc4=
+		</data>
+		<key>GMSelected@2x.png</key>
+		<data>
+		dYdXIWdj8ciaNEKDgXD7YTXmJH4=
+		</data>
+		<key>GMVideoIcon.png</key>
+		<data>
+		zPJxIqss3DiQtg8Jk+/G/6Zz5JY=
+		</data>
+		<key>GMVideoIcon@2x.png</key>
+		<data>
+		+oBUakBslNRvR14HvkkK/wfRC74=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EXBO8pvkWYeIYBYnKe1UtkbREvI=
+		IkUjpFONuULfZHmCCnDxU75R0qQ=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -158,7 +182,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		vptZDDXHUREqUpvHxLulD2gRt9w=
+		9Ys7p/4jDX0EQyY85JDShyPjtTs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -168,14 +192,77 @@
 		<data>
 		vO/gVYVVkU1zHBaxd4xJ53/ga5k=
 		</data>
+		<key>ca.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1Z3+BQ3ns69eAUqsYM7PSTvRl88=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>config.xml</key>
 		<data>
-		RuKZWH0L3vf8+lAEVqkSU+fZtQw=
+		kzl3KBqPBPzxArODCxKsGR61BVU=
 		</data>
+		<key>de.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SIrgPYJ3MnIjxXpwoJTQl+2PB7U=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>embedded.mobileprovision</key>
 		<data>
 		A9Wq7dQXMbPPuPZt+xA7fFtS10U=
 		</data>
+		<key>en.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9HW4hIN6wuwMkrWYeAWlLER7rnY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LfhkTllnSNW4sdjXTuJAk4F98dU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TvnIz1/phnmLHl10uhgOP++M1rM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>it.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dUkbC8/BE4dZrUCNHLnNFyLlpho=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2/OXww4TK63SFxiGefgrYql+rOY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>www/README.md</key>
 		<data>
 		b/RM/8QtjncTZ4abuzhuoPctEp0=
@@ -194,7 +281,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		pBO+txJlp7CCeK6T6D2mF1wB9e4=
+		g3pmBJ72vDe1BvgB9YCJQ49Eh3U=
 		</data>
 		<key>www/css/animate.css</key>
 		<data>
@@ -242,15 +329,15 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		dnCuy+BRNPIxVjWFpIqdMa/MPWo=
+		SAZlxaHrMdRZq0eMuWeBGCvVKXo=
 		</data>
 		<key>www/js/app.js</key>
 		<data>
-		8Gs16wqzy++45rKOyq1nKl+nr58=
+		Y29iGAXSVI9Q1F+XcJIl59pImD0=
 		</data>
 		<key>www/js/controllers.js</key>
 		<data>
-		eUvACKK/6l32PU6D/kBMqNYxliQ=
+		kkKXu54TH3IYMstkvUXzUq/fWLs=
 		</data>
 		<key>www/js/jquery.min.js</key>
 		<data>
@@ -519,6 +606,10 @@
 		<key>www/manifest.json</key>
 		<data>
 		v/o/81FXI10WiWBPjl8fKeAxzfo=
+		</data>
+		<key>www/plugins/com.synconset.imagepicker/www/imagepicker.js</key>
+		<data>
+		zvqn3mut8bq2tRkzcicPKFg82pw=
 		</data>
 		<key>www/plugins/cordova-plugin-console/www/console-via-logger.js</key>
 		<data>
@@ -939,11 +1030,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ma6dorIVxReW/Hl99j1geXVacYk=
+			1HRJa+Ictq6qtEzdrMj9Dr2A/T4=
 			</data>
 			<key>hash2</key>
 			<data>
-			DY92kzxQZM16em05xM5ETHyaCPUEv8OrUFnTlgxAHs8=
+			VW5592YURvBjcKZMRibCRG1w7PL2jjkH4w6GxX5SyIM=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -961,11 +1052,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			84DBwO75CyaIcN9xyytbpB3PziI=
+			XwEB2D2e0rKYuPSmlWjAlHynfME=
 			</data>
 			<key>hash2</key>
 			<data>
-			qhLSlQwBk/qci01zzo7yRZAwxXLDk1aOvZfhgQYQVGc=
+			8EK2HP5dG55EuF5WjEkZN3ZYFiG/HQzsnyyqK6QM1cE=
+			</data>
+		</dict>
+		<key>GMEmptyFolder@1x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e11RHTQ4JWqtQ1GEnqyGGeWkaUI=
+			</data>
+			<key>hash2</key>
+			<data>
+			brpjTVfCOCFzWHPHebqTzmeHmHYz7iaaNvDTg2coiWg=
+			</data>
+		</dict>
+		<key>GMEmptyFolder@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fOXmu5ogCwKOMfAsoHh3wVTkW6U=
+			</data>
+			<key>hash2</key>
+			<data>
+			MFNzuueqxDucOBF2+tL8XPE8TSrS+YDnIdCExts5z9k=
+			</data>
+		</dict>
+		<key>GMSelected.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZwDkB0AtEGOc9mVvXWsikNLIPc4=
+			</data>
+			<key>hash2</key>
+			<data>
+			qAjrDrcMEToWeimHD3xcbQdMUriGhqeH892Sch0kO6I=
+			</data>
+		</dict>
+		<key>GMSelected@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dYdXIWdj8ciaNEKDgXD7YTXmJH4=
+			</data>
+			<key>hash2</key>
+			<data>
+			5ZscmfWqKu41JN3GkIJHRp/t3X6scM5cnv0BjMcERHk=
+			</data>
+		</dict>
+		<key>GMVideoIcon.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zPJxIqss3DiQtg8Jk+/G/6Zz5JY=
+			</data>
+			<key>hash2</key>
+			<data>
+			Kv4tkR0O0vXQTYXCXD9M1MOy4FcYYcx9b8PY5d/3zFw=
+			</data>
+		</dict>
+		<key>GMVideoIcon@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+oBUakBslNRvR14HvkkK/wfRC74=
+			</data>
+			<key>hash2</key>
+			<data>
+			McXaRs5WmUfBR9h6zvmlcfJEQde/ZFYytguL7r4MTnk=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -1126,11 +1283,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vptZDDXHUREqUpvHxLulD2gRt9w=
+			9Ys7p/4jDX0EQyY85JDShyPjtTs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PhRRCSgS6bbdyl3LXR+AopKJG0SFO+yslPGKnSPh/T0=
+			1D3UGeiBtKznth9p3rZRWQ/Ysgdr2wJKnLY+zHuEAWA=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -1144,16 +1301,42 @@
 			l3BKiWC0+szu9UOXoI+10KRWJHw2JzWSFaoqJ98iZWw=
 			</data>
 		</dict>
+		<key>ca.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1Z3+BQ3ns69eAUqsYM7PSTvRl88=
+			</data>
+			<key>hash2</key>
+			<data>
+			SB2bbJjxGF5lv6Ovsvsd87DgOt5Zrbea3en6oZZYUYc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RuKZWH0L3vf8+lAEVqkSU+fZtQw=
+			kzl3KBqPBPzxArODCxKsGR61BVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			zedfp2ZWZfQXWR210EVzb93zqW0qZgHOE+wgQErjNNA=
+			cwR8UzGVQcT+q9jEMWHP6tuaniygEHQffPVGUpC1CZg=
 			</data>
+		</dict>
+		<key>de.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SIrgPYJ3MnIjxXpwoJTQl+2PB7U=
+			</data>
+			<key>hash2</key>
+			<data>
+			ylLBgNqtnoee+2bTgIwsmXcD7d/g+IhoX+PvPwSPWrs=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
@@ -1165,6 +1348,71 @@
 			<data>
 			LYi//0uRxee4p9mFA6YFn8G/k7E/HsDYg3Po8+7N2Lo=
 			</data>
+		</dict>
+		<key>en.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9HW4hIN6wuwMkrWYeAWlLER7rnY=
+			</data>
+			<key>hash2</key>
+			<data>
+			z3yGsSqKN455id7uRQxp/I1vatsv7jAcOHGro9TlWv8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LfhkTllnSNW4sdjXTuJAk4F98dU=
+			</data>
+			<key>hash2</key>
+			<data>
+			6ZV+Slmn8GTbDhJUbVpbM7a4mtB0ADmzWVpsh0tya3o=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TvnIz1/phnmLHl10uhgOP++M1rM=
+			</data>
+			<key>hash2</key>
+			<data>
+			M/keRQKdN1tgWaw/vf//JYEPVga/PMDs2rkNXUtjVKg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>it.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dUkbC8/BE4dZrUCNHLnNFyLlpho=
+			</data>
+			<key>hash2</key>
+			<data>
+			Jk9x1bYqAwfGG0E438/d2Xfe0DQ+TH4LHK/mG2OoAcc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt.lproj/GMImagePicker.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2/OXww4TK63SFxiGefgrYql+rOY=
+			</data>
+			<key>hash2</key>
+			<data>
+			6aftbJWH0nWZdqwulpQ1a3SOe/CDApnZIzi61UnLiUk=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>www/README.md</key>
 		<dict>
@@ -1214,11 +1462,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pBO+txJlp7CCeK6T6D2mF1wB9e4=
+			g3pmBJ72vDe1BvgB9YCJQ49Eh3U=
 			</data>
 			<key>hash2</key>
 			<data>
-			6MNJttFX8MeIgpVpyH3y433g31T87MO4f05oacbYcOw=
+			jRvzOj5WGQE7iZ1zKOq54353VHyih1QoeOR8MndcsJg=
 			</data>
 		</dict>
 		<key>www/css/animate.css</key>
@@ -1346,33 +1594,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dnCuy+BRNPIxVjWFpIqdMa/MPWo=
+			SAZlxaHrMdRZq0eMuWeBGCvVKXo=
 			</data>
 			<key>hash2</key>
 			<data>
-			a9WEnuIWsOQ6is9yPdUJEgbkUqNnBndByd6kHTyKdRk=
+			xPfY1fiNFR5uop6XsRrreMnp2Jyr609jq+qDK71bd7w=
 			</data>
 		</dict>
 		<key>www/js/app.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8Gs16wqzy++45rKOyq1nKl+nr58=
+			Y29iGAXSVI9Q1F+XcJIl59pImD0=
 			</data>
 			<key>hash2</key>
 			<data>
-			p5a4HGVarv4esJds9z0BpcCFvsXY2IfnpNpbQxw1K1U=
+			1lel1ewlhGZbuVaUwC85moL9/ynGaRVkmmzH/9MnF74=
 			</data>
 		</dict>
 		<key>www/js/controllers.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eUvACKK/6l32PU6D/kBMqNYxliQ=
+			kkKXu54TH3IYMstkvUXzUq/fWLs=
 			</data>
 			<key>hash2</key>
 			<data>
-			8ZmKb4VQPBXr967Z1q1mq7rcIdzH1c5YXggsL2v9t6M=
+			B7AzQ0/nO+93vRzPlYNZg0itgV61E/Jy0e4gWSFC+pQ=
 			</data>
 		</dict>
 		<key>www/js/jquery.min.js</key>
@@ -2110,6 +2358,17 @@
 			<key>hash2</key>
 			<data>
 			6COEeExvkJpl0Gu//xQeOGUdGQAUt1P/cuyleFJg7/8=
+			</data>
+		</dict>
+		<key>www/plugins/com.synconset.imagepicker/www/imagepicker.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zvqn3mut8bq2tRkzcicPKFg82pw=
+			</data>
+			<key>hash2</key>
+			<data>
+			bGNwLlxu7QFnpjbVFCnJk4gYh6uQ3uqGuxnT5X2TniM=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-console/www/console-via-logger.js</key>

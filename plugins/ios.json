@@ -36,6 +36,10 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.team4twionic.direction.bio"
+        },
+        "com.synconset.imagepicker": {
+            "PHOTO_LIBRARY_USAGE_DESCRIPTION": "upload your photo to album",
+            "PACKAGE_NAME": "com.team4twionic.direction.bio"
         }
     },
     "dependent_plugins": {
