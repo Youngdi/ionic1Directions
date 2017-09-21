@@ -9,6 +9,10 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.synconset.ImagePicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"sqlDB\"><param name=\"android-package\" value=\"me.rahul.plugins.sqlDB.sqlDB\" /></feature>",
                             "count": 1
                         },
@@ -47,16 +51,22 @@
                         {
                             "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.synconset.ImagePicker\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
             },
             "AndroidManifest.xml": {
                 "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@style/Theme.AppCompat.Light\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ],
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
@@ -68,22 +78,15 @@
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 2
                         }
-                    ],
-                    "/manifest/application": [
-                        {
-                            "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@style/Theme.AppCompat.Light\"></activity>",
-                            "count": 1
-                        }
                     ]
                 }
             }
         }
     },
     "installed_plugins": {
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
+        },
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
         },
@@ -119,13 +122,18 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
-        },
-        "com.synconset.imagepicker": {
-            "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
         }
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "id": "com.synconset.imagepicker.ImagePicker",
+            "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+            "pluginId": "com.synconset.imagepicker",
+            "clobbers": [
+                "plugins.imagePicker"
+            ]
+        },
         {
             "id": "cordova-plugin-dbcopy.sqlDB",
             "file": "plugins/cordova-plugin-dbcopy/www/sqlDB.js",
@@ -361,17 +369,10 @@
                 "cordova.plugins.Keyboard"
             ],
             "runs": true
-        },
-        {
-            "id": "com.synconset.imagepicker.ImagePicker",
-            "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
-            "pluginId": "com.synconset.imagepicker",
-            "clobbers": [
-                "plugins.imagePicker"
-            ]
         }
     ],
     "plugin_metadata": {
+        "com.synconset.imagepicker": "2.1.8",
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-console": "1.0.7",
         "cordova-plugin-dbcopy": "1.0.4",
@@ -383,7 +384,6 @@
         "es6-promise-plugin": "4.1.0",
         "cordova-plugin-x-socialsharing": "5.1.8",
         "cordova-sqlite-storage": "2.0.4",
-        "ionic-plugin-keyboard": "2.2.1",
-        "com.synconset.imagepicker": "2.1.8"
+        "ionic-plugin-keyboard": "2.2.1"
     }
 }

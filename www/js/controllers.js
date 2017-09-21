@@ -873,7 +873,7 @@ angular.module('ionicApp.controllers', [])
         LessonContent().then(function(content) {
            return getLessonQuestionsAndAnswers(content);
         }).then(function(myAnswer) {
-			$cordovaSocialSharing.share('Check out my answers - '+ $scope.lesson_day_title + '\n\n' + myAnswer)
+			$cordovaSocialSharing.share('Check out my answers\n'+ $scope.lesson_day_title + '\n\n' + myAnswer)
             .then(function(result) {
               // Success!
             }, function(err) {

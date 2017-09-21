@@ -3,69 +3,45 @@ angular.module('app', ['ionic', 'ngCordova', 'ionicApp.controllers', 'ionicApp.s
 
 .run(function($cordovaDevice, $ionicLoading, $ionicPlatform, $cordovaSQLite, $http, $cordovaFile, $q, SQL) {
         $ionicPlatform.ready(function() {
+            
           // Initialize Firebase
           // TODO: Replace with your project's customized code snippet
-          var config = {
-              apiKey: "AIzaSyAsvfw2Wx8MKBp9vAdPhkWFEHFl9rcHZdc",
-              authDomain: "directions-8d173.firebaseapp.com",
-              databaseURL: "https://directions-8d173.firebaseio.com",
-              storageBucket: "directions-8d173.appspot.com",
-              messagingSenderId: "442072231717",
-          };
-          firebase.initializeApp(config);
-        //   firebase.auth().signInAnonymously()
-        //     .then(function (_auth) {
-        //       alert("Logged In!");
-        //     })
-        //     .catch(function(error) {
-        //         alert(errorMessage);
-        //     });
-          firebase.auth().signInAnonymously().catch(function(error) {
-             // Handle Errors here.
-             var errorCode = error.code;
-             var errorMessage = error.message;
-             console.log(errorMessage);
-             // ...
-          });
-          var myConnectionsRef = firebase.database().ref('users/joe/connections');
-          // stores the timestamp of my last disconnect (the last time I was seen online)
-          var lastOnlineRef = firebase.database().ref('users/joe/lastOnline');
+        //   var config = {
+        //       apiKey: "AIzaSyAsvfw2Wx8MKBp9vAdPhkWFEHFl9rcHZdc",
+        //       authDomain: "directions-8d173.firebaseapp.com",
+        //       databaseURL: "https://directions-8d173.firebaseio.com",
+        //       storageBucket: "directions-8d173.appspot.com",
+        //       messagingSenderId: "442072231717",
+        //   };
+        //   firebase.initializeApp(config);
+        //   firebase.auth().signInAnonymously().catch(function(error) {
+        //      // Handle Errors here.
+        //      var errorCode = error.code;
+        //      var errorMessage = error.message;
+        //      console.log(errorMessage);
+        //      // ...
+        //   });
+        //   var myConnectionsRef = firebase.database().ref('users/joe/connections');
+        //   // stores the timestamp of my last disconnect (the last time I was seen online)
+        //   var lastOnlineRef = firebase.database().ref('users/joe/lastOnline');
           
-          var connectedRef = firebase.database().ref('.info/connected');
-          connectedRef.on('value', function(snap) {
-            if (snap.val() === true) {
-                // alert(firebase.UserInfo.uid);
-              // We're connected (or reconnected)! Do anything here that should happen only if online (or on reconnect)
-              var con = myConnectionsRef.push();
-              // When I disconnect, remove this device
-              con.onDisconnect().remove();
-          
-              // Add this device to my connections list
-              // this value could contain info about the device or a timestamp too
-              con.set(true);
-          
-              // When I disconnect, update the last time I was seen online
-              lastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
-            }
-          });
-        // Initialize Firebase
-        // TODO: Replace with your project's customized code snippet
-        // var config = {
-        //     apiKey: "AIzaSyBNA2dwwox1nfWR_SNUhC6mgmbCO53PJRY",
-        //     authDomain: "directions-8d173.firebaseapp.com",
-        //     databaseURL: "https://directions-8d173.firebaseio.com",
-        //     storageBucket: "directions-8d173.appspot.com",
-        //     messagingSenderId: "442072231717",
-        // };
-        // firebase.initializeApp(config);
-        // var connectedRef = firebase.database().ref(".info/connected");
-        //     connectedRef.on("value", function(snap) {
+        //   var connectedRef = firebase.database().ref('.info/connected');
+        //   connectedRef.on('value', function(snap) {
         //     if (snap.val() === true) {
-        //         alert("connected");
-        //     } else {
-        //         alert("not connected");
+        //         // alert(firebase.UserInfo.uid);
+        //       // We're connected (or reconnected)! Do anything here that should happen only if online (or on reconnect)
+        //       var con = myConnectionsRef.push();
+        //       // When I disconnect, remove this device
+        //       con.onDisconnect().remove();
+          
+        //       // Add this device to my connections list
+        //       // this value could contain info about the device or a timestamp too
+        //       con.set(true);
+          
+        //       // When I disconnect, update the last time I was seen online
+        //       lastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
         //     }
-        //     });
+        //   });
             $ionicLoading.show({
                 template: 'Loading...'
             });
