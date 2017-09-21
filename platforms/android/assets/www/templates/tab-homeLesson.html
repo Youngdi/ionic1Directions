@@ -1,0 +1,26 @@
+<ion-view view-title="{{lesson_title}}">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="list card" ng-repeat="data in lesson_data">
+            <a class="item item-text-wrap item-icon-left item-icon-right" href="#/tab/lessonContent/{{data.h_go}}">
+                <i class="icon ion-flag"></i>
+                <h2>{{data.h_text}}</h2>
+                <p ng-if="lang == 'en'">Day {{$index+1}}</p>
+                <p ng-if="lang == 'cht'">第 {{$index+1}} 天</p>
+                <p ng-if="lang == 'chs'">第 {{$index+1}} 天</p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+        </div>
+        <!--         <div class="list">
+            <div ng-repeat="data in lesson_data">
+                <a class="item item-text-wrap item-icon-left item-icon-right" href="#/tab/lessonContent/{{data.h_go}}">
+                    <i class="icon ion-pin"></i>
+                    <h2>{{data.h_text}}</h2>
+                    <p>Day {{$index+1}}</p>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+            </div>
+        </div> -->
+    </ion-content>
+</ion-view>

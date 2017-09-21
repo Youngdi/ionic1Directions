@@ -1,0 +1,15 @@
+<ion-modal-view>
+    <ion-header-bar class="nav_bar_color bar-stable">
+        <h1 class="title">{{P_title}}</h1>
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+    </ion-header-bar>
+    <ion-content overflow-scroll="true">
+        <div class="list">
+            <div ng-repeat="data in bible_verse">
+                <p class="item item-text-wrap">
+                    <BP class="bible_content">{{data}}</BP>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>
