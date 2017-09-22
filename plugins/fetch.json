@@ -104,5 +104,13 @@
         "variables": {
             "PHOTO_LIBRARY_USAGE_DESCRIPTION": "upload your photo to album"
         }
+    },
+    "cordova-plugin-google-analytics": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/danwilson/google-analytics-plugin.git"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

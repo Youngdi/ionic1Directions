@@ -39,6 +39,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.KMBT.direction.EN.BIO"
         }
     },
     "dependent_plugins": {

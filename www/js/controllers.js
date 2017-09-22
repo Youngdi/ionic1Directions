@@ -152,6 +152,7 @@ angular.module('ionicApp.controllers', [])
                 }
             });
         }
+        analytics.trackEvent('Setting', 'FontType', 'FontType: '+ font_type);
     };
     $scope.setLevelText = function(size) {
         var query_user = "UPDATE user_db SET font_size = " + size + " WHERE username = 'Bill' ";
@@ -166,6 +167,7 @@ angular.module('ionicApp.controllers', [])
                 fontSize: size + 'px',
             });
         });
+        analytics.trackEvent('Setting', 'FontSize', 'FontSize: '+ size);
     };
 
     $scope.MoreTab = function() {
@@ -306,6 +308,7 @@ angular.module('ionicApp.controllers', [])
 })
 
 .controller('MoreDetailsCtrl', function($scope, $cordovaSQLite, $stateParams, Bible_api) {
+    analytics.trackView('More');
     More_detail_init();
 
     function More_detail_init() {
@@ -326,7 +329,6 @@ angular.module('ionicApp.controllers', [])
             }, 100);
 
         });
-
         function version_select(article_version) {
             var query = "SELECT * FROM " + article_version + " WHERE h_where = '" + $stateParams.h_go + "' ORDER BY h_id";
             $cordovaSQLite.execute(db, query).then(function(res) {
@@ -340,6 +342,7 @@ angular.module('ionicApp.controllers', [])
                         $scope.more_title = $stateParams.h_text;
                     });
                 }, 500);
+                analytics.trackEvent('More', 'Select', article_version + '-' + $stateParams.h_text);
             }, function(err) {
                 alert(err);
             });
@@ -348,17 +351,14 @@ angular.module('ionicApp.controllers', [])
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         More_detail_init();
     });
-
-
 })
 
 .controller('SettingCtrl', function($ionicPlatform, $cordovaFile, $rootScope, $ionicHistory, $scope, $cordovaSQLite) {
+    analytics.trackView('Setting');
     Setting();
-
     function Setting() {
         var query_user = "SELECT * FROM user_db WHERE username = 'Bill' ";
         $cordovaSQLite.execute(db, query_user).then(function(res) {
-
             $scope.font_size = res.rows.item(0).font_size;
             $scope.font = res.rows.item(0).font_type;
             $scope.lang = res.rows.item(0).lang;
@@ -405,13 +405,14 @@ angular.module('ionicApp.controllers', [])
         $scope.$broadcast('scroll.refreshComplete');
     };
     $scope.lang_setting = function(lang) {
+        analytics.trackEvent('Setting', 'Language', 'Language: '+ lang);
         var query_user = "UPDATE user_db SET lang = '" + lang + "' WHERE username = 'Bill' ";
         $cordovaSQLite.execute(db, query_user).then(function(res) {
             $ionicHistory.goBack();
         });
     };
     $scope.color_setting = function(color_hex, bar_color, tabs_color, color_ionic) {
-
+        analytics.trackEvent('Setting', 'Color', 'Color: '+ color_hex + '- '+ color_ionic + '-' + bar_color, 100);
         var query_user1 = "SELECT * FROM user_db WHERE username = 'Bill' ";
         $cordovaSQLite.execute(db, query_user1).then(function(res) {
             $('.font_range_color').removeClass('range-' + res.rows.item(0).color_ionic);
@@ -427,19 +428,18 @@ angular.module('ionicApp.controllers', [])
         // $rootScope.viewColor = color_hex;
     };
     $scope.font_size_setting = function(size) {
+        analytics.trackEvent('Setting', 'FontSize', 'FontSize: '+size, 100);
         var query_user = "UPDATE user_db SET font_size = " + size + " WHERE username = 'Bill' ";
         $cordovaSQLite.execute(db, query_user).then(function(res) {
             $ionicHistory.goBack();
             $('#lesson_content').css({
                 fontSize: size + 'px'
             });
-            // $('.bible_content').css({
-            //     fontSize: size + 'px'
-            // });
         });
     };
     //這是Setting裡面的change_font
     $scope.change_font = function(font_type, type) {
+        analytics.trackEvent('Setting', 'FontType', 'FontType: '+ font_type);
         var query_user = "UPDATE user_db SET font_type = '" + font_type + "' WHERE username = 'Bill' ";
         $cordovaSQLite.execute(db, query_user).then(function(res) {
             $ionicHistory.goBack();
@@ -581,6 +581,7 @@ angular.module('ionicApp.controllers', [])
           });
     }
     function content_version_select(lang, article_version, size, font_type) {
+
             $('#lesson_content').empty();
             var query = "SELECT * FROM " + article_version + " WHERE h_where = '" + $stateParams.h_go + "' ORDER BY h_id";
             $cordovaSQLite.execute(db, query).then(function(res) {
@@ -744,6 +745,8 @@ angular.module('ionicApp.controllers', [])
                             $scope.shareButton = false;
                         });
                     }, 400);
+                    analytics.trackView('Lesson');
+                    analytics.trackEvent('Book', 'Lesson', article_version + '-' + res.rows.item(0).h_text, 100);
                     $('#lesson_content').css({
                         fontSize: size + 'px',
                         fontFamily: font_type
@@ -870,6 +873,7 @@ angular.module('ionicApp.controllers', [])
 			});
 		}
     $scope.shareAnywhere = function () {
+        analytics.trackEvent('Share', 'Answers');
         LessonContent().then(function(content) {
            return getLessonQuestionsAndAnswers(content);
         }).then(function(myAnswer) {
@@ -893,7 +897,7 @@ angular.module('ionicApp.controllers', [])
     // dbqueryWithConnection(sql)
 
   $scope.autoExpand = function(e) {
-
+        analytics.trackEvent('Questions', 'Answers');
         var element = typeof e === 'object' ? e.target : document.getElementById(e);
         var scrollHeight = element.scrollHeight; // replace 60 by the sum of padding-top and padding-bottom
         element.style.height = scrollHeight + "px";
@@ -921,6 +925,8 @@ angular.module('ionicApp.controllers', [])
         book_name = server_passage[0];
         chapter_nr = Number(server_passage[1].slice(1, 4));
         $scope.P_title = P_title;
+        analytics.trackView('Bible');
+        analytics.trackEvent('Bible', 'Reference', 'Bible: '+ version+ '-'+ book_name + ' ' + chapter_nr + ':' + server_passage[2], 100);
         if (version === "kjv") {
             if (server_passage.length === 2) {
                 query = "SELECT * FROM bible_kjv WHERE book_name = '" + book_name + "' AND chapter_nr ='" + chapter_nr + "' ORDER BY verse_nr";

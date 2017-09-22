@@ -1,8 +1,16 @@
 var db = null;
 angular.module('app', ['ionic', 'ngCordova', 'ionicApp.controllers', 'ionicApp.services'])
 
-.run(function($cordovaDevice, $ionicLoading, $ionicPlatform, $cordovaSQLite, $http, $cordovaFile, $q, SQL) {
+.run(function($cordovaDevice, $ionicLoading, $ionicPlatform, $cordovaSQLite, $http, $cordovaFile, $q, SQL, $cordovaGoogleAnalytics) {
         $ionicPlatform.ready(function() {
+            var device_UUID = $cordovaDevice.getDevice().UUID;
+            if (typeof analytics !== "undefined") {
+                analytics.startTrackerWithId('UA-71058676-2', 30);
+                analytics.setUserId(device_UUID);
+                analytics.trackView('Home Screen');
+            } else {
+                console.log("Google Analytics Unavailable");
+            }
           // Initialize Firebase
           // TODO: Replace with your project's customized code snippet
         //   var config = {

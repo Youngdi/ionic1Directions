@@ -16,6 +16,7 @@
         "cordova-plugin-dbcopy": "^2.0.0",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-google-analytics": "git+https://github.com/danwilson/google-analytics-plugin.git",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.1",
         "cordova-plugin-telerik-imagepicker": "^2.1.8",
@@ -39,7 +40,8 @@
             "cordova-plugin-dbcopy": {},
             "com.synconset.imagepicker": {
                 "PHOTO_LIBRARY_USAGE_DESCRIPTION": "upload your photo to album"
-            }
+            },
+            "cordova-plugin-google-analytics": {}
         },
         "platforms": [
             "android"
