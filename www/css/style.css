@@ -169,3 +169,7 @@ textarea,
     font-size: 16px;
     line-height: 22px;
 }
+::-webkit-scrollbar {
+  display: none;
+  background: transparent; /* make scrollbar transparent */
+}
