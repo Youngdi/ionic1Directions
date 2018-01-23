@@ -886,13 +886,7 @@ angular.module('ionicApp.controllers', [])
             // $cordovaSocialSharing.shareViaEmail(myAnswer, 'Check out my answers from '+ $scope.lesson_day_title);
         });
     };
-    /* const curry = (fn, ...args1) =>  (...args2) => fn(...args1, ...args2);
-    function curry(fn, ...args1) {
-        return (...args2) => fn(...args1, ...args2);
-    }
-    const dbquery = (connection,sql) =>{
-        return 1
-    }*/
+
     // const dbqueryWithConnection = curry(dbquery,connection);
     // dbqueryWithConnection(sql)
 
@@ -907,6 +901,7 @@ angular.module('ionicApp.controllers', [])
         $cordovaSQLite.execute(db, query).then(function(res) {});
   };
   $scope.Bible = function(passage, version, P_title) {
+        $('#lesson_content').hide();
         setTimeout(function() {
             var query_user = "SELECT * FROM user_db WHERE username = 'Bill' ";
             $cordovaSQLite.execute(db, query_user).then(function(res) {
@@ -1163,6 +1158,7 @@ angular.module('ionicApp.controllers', [])
                 }
             }
         }
+        $('#lesson_content').show();
     };
     $scope.font = function() {
         $scope.modal.show();
@@ -1187,7 +1183,7 @@ angular.module('ionicApp.controllers', [])
     });
     $ionicModal.fromTemplateUrl('templates/my-modal.html', {
         scope: $scope,
-        animation: 'slide-in-up'
+        animation: 'none'
     }).then(function(modal) {
         $scope.modal = modal;
     });

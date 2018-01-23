@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "com.synconset.imagepicker.ImagePicker",
-        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
-        "pluginId": "com.synconset.imagepicker",
-        "clobbers": [
-            "plugins.imagePicker"
-        ]
-    },
-    {
         "id": "cordova-plugin-dbcopy.sqlDB",
         "file": "plugins/cordova-plugin-dbcopy/www/sqlDB.js",
         "pluginId": "cordova-plugin-dbcopy",
@@ -198,6 +190,15 @@ module.exports = [
         "runs": true
     },
     {
+        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+        "pluginId": "cordova-plugin-google-analytics",
+        "clobbers": [
+            "analytics",
+            "ga"
+        ]
+    },
+    {
         "id": "cordova-plugin-splashscreen.SplashScreen",
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "pluginId": "cordova-plugin-splashscreen",
@@ -243,34 +244,24 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
-    },
-    {
-        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
-        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
-        "pluginId": "cordova-plugin-google-analytics",
-        "clobbers": [
-            "analytics",
-            "ga"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.synconset.imagepicker": "2.1.8",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-console": "1.0.7",
     "cordova-plugin-dbcopy": "1.0.4",
     "cordova-plugin-device": "1.1.6",
     "cordova-plugin-file": "4.3.3",
+    "cordova-plugin-google-analytics": "1.8.3",
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.2.3",
     "cordova-plugin-whitelist": "1.3.2",
     "es6-promise-plugin": "4.1.0",
     "cordova-plugin-x-socialsharing": "5.1.8",
     "cordova-sqlite-storage": "2.0.4",
-    "ionic-plugin-keyboard": "2.2.1",
-    "cordova-plugin-google-analytics": "1.8.3"
+    "ionic-plugin-keyboard": "2.2.1"
 };
 // BOTTOM OF METADATA
 });

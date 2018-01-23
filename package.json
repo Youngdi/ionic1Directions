@@ -9,8 +9,8 @@
         "gulp-sass": "^3.1.0"
     },
     "dependencies": {
-        "com.synconset.imagepicker": "~2.1.8",
         "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-dbcopy": "^2.0.0",
@@ -38,9 +38,6 @@
             "cordova-sqlite-storage": {},
             "ionic-plugin-keyboard": {},
             "cordova-plugin-dbcopy": {},
-            "com.synconset.imagepicker": {
-                "PHOTO_LIBRARY_USAGE_DESCRIPTION": "upload your photo to album"
-            },
             "cordova-plugin-google-analytics": {}
         },
         "platforms": [
